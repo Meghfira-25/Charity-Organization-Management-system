@@ -1,0 +1,33 @@
+.content-image {
+  height: 185px;
+  background: radial-gradient(circle at 25% 20%, rgba(241, 181, 72, .38), transparent 24%), linear-gradient(140deg, #392013, #170b06);
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.gallery-grid .content-image {
+  height: 240px;
+}
+
+.cms-image-preview {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #100704;
+}
+
+.cms-image-preview img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.cms-image-preview small {
+  display: block;
+  padding: 10px 13px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}

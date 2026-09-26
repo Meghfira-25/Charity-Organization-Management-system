@@ -1,0 +1,58 @@
+.status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 0 9px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .04);
+  color: #b5a79e;
+}
+
+.status-approved, .status-active, .status-available, .status-published, .status-received, .status-confirmed, .status-completed, .status-resolved {
+  color: #9cddb6;
+  border-color: rgba(117, 201, 154, .25);
+  background: rgba(117, 201, 154, .08);
+}
+
+.status-pending, .status-planned, .status-upcoming, .status-new, .status-more-info, .status-more-info {
+  color: #f4cc7d;
+  border-color: rgba(241, 181, 72, .25);
+  background: rgba(241, 181, 72, .08);
+}
+
+.status-rejected, .status-cancelled, .status-inactive, .status-unavailable {
+  color: #f1a09d;
+  border-color: rgba(239, 124, 120, .25);
+  background: rgba(239, 124, 120, .08);
+}
+
+.status-ongoing, .status-read, .status-partially-distributed {
+  color: #a9c9f3;
+  border-color: rgba(125, 167, 220, .25);
+  background: rgba(125, 167, 220, .08);
+}
+
+.status-planned {
+  color: #dbc6aa;
+}
+
+.status-upcoming {
+  color: #ffd277;
+  border-color: rgba(241,181,72,.24);
+}
+
+.status-ongoing {
+  color: #95dfb4;
+  border-color: rgba(117,201,154,.25);
+}
+
+.status-completed {
+  color: #b8e8ca;
+  border-color: rgba(117,201,154,.3);
+  background: rgba(28,69,46,.42);
+}

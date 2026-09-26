@@ -1,0 +1,125 @@
+.public-message-widget {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 78;
+  display: grid;
+  justify-items: end;
+  gap: 12px;
+}
+
+.public-message-trigger {
+  border: 1px solid rgba(241, 181, 72, .4);
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+  color: #241207;
+  min-height: 50px;
+  padding: 0 17px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 800;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, .32);
+  cursor: pointer;
+}
+
+.public-message-trigger span {
+  font-size: 12px;
+}
+
+.public-message-panel {
+  width: min(370px, calc(100vw - 28px));
+  background: rgba(24, 12, 7, .98);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .48);
+  backdrop-filter: blur(22px);
+}
+
+.public-message-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.public-message-head h3 {
+  font-size: 20px;
+  margin: 5px 0 0;
+}
+
+.public-message-panel>p {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #998a80;
+  margin: 11px 0 17px;
+}
+
+.public-message-panel form {
+  display: grid;
+  gap: 11px;
+}
+
+.public-message-panel label {
+  display: grid;
+  gap: 6px;
+  color: #cfc1b8;
+  font-size: 10px;
+}
+
+.public-message-panel input, .public-message-panel textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #120905;
+  color: #fff;
+  padding: 11px 12px;
+  outline: none;
+}
+
+.public-message-panel input:focus, .public-message-panel textarea:focus {
+  border-color: rgba(241, 181, 72, .5);
+}
+
+.message-widget-feedback {
+  font-size: 10px;
+  line-height: 1.5;
+  padding: 9px 11px;
+  border-radius: 9px;
+  color: #a8e3c0;
+  background: rgba(117, 201, 154, .08);
+  border: 1px solid rgba(117, 201, 154, .2);
+}
+
+.message-widget-error {
+  color: #f3aaa6;
+  background: rgba(239, 124, 120, .08);
+  border-color: rgba(239, 124, 120, .22);
+}
+
+@media (max-width: 680px) {
+  .public-message-panel {
+    width: calc(100vw - 24px);
+    max-height: calc(100vh - 95px);
+    overflow: auto;
+    padding: 17px;
+  }
+
+  .public-message-widget {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .public-message-trigger {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .public-message-trigger span {
+    display: none;
+  }
+
+}

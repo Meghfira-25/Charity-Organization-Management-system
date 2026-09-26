@@ -1,0 +1,141 @@
+.profile-alert-error {
+  color: #f3aaa6;
+  background: rgba(239, 124, 120, .08);
+  border-color: rgba(239, 124, 120, .26);
+}
+
+.beneficiary-proof-section {
+  border: 1px solid rgba(241, 181, 72, .18);
+  background: rgba(241, 181, 72, .035);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 4px;
+}
+
+.proof-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.proof-section-heading h3 {
+  font-size: 16px;
+  margin: 5px 0 7px;
+}
+
+.proof-section-heading p {
+  font-size: 11px;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 610px;
+  margin: 0;
+}
+
+.proof-upload-button {
+  position: relative;
+  flex: none;
+}
+
+.proof-upload-button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.proof-upload-button.disabled {
+  opacity: .55;
+  pointer-events: none;
+}
+
+.proof-file-list {
+  display: grid;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.proof-file {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  gap: 11px;
+  align-items: center;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, .13);
+}
+
+.proof-file>svg {
+  color: var(--gold);
+}
+
+.proof-file>div {
+  min-width: 0;
+}
+
+.proof-file b, .proof-file small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.proof-file b {
+  font-size: 11px;
+}
+
+.proof-file small {
+  color: var(--muted);
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+.proof-empty {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 10px;
+  padding: 13px;
+  border: 1px dashed rgba(255, 255, 255, .12);
+  border-radius: 11px;
+}
+
+.proof-empty svg {
+  color: var(--gold);
+  flex: none;
+}
+
+.proof-count {
+  display: block;
+  color: var(--muted);
+  margin-top: 9px;
+  font-size: 9px;
+}
+
+@media (max-width: 1024px) {
+  .proof-section-heading {
+    flex-direction: column;
+  }
+
+  .proof-upload-button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 680px) {
+  .beneficiary-proof-section {
+    padding: 15px;
+  }
+
+  .proof-file {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .proof-file .danger-icon {
+    grid-column: 3;
+  }
+
+}

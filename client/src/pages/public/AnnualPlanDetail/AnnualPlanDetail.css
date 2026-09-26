@@ -1,0 +1,324 @@
+.annual-plan-detail-page {
+  background: var(--bg);
+  overflow: hidden;
+  padding: 10px;
+}
+
+.annual-plan-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 26px;
+}
+
+.annual-plan-back:hover {
+  gap: 11px;
+  color: var(--gold-2);
+}
+
+.annual-plan-detail-hero {
+  padding: 170px 0 70px;
+  border-bottom: 1px solid rgba(241,181,72,.08);
+  padding-top: 158px;
+  background: radial-gradient(circle at 78% 18%, rgba(241,181,72,.08), transparent 30%), linear-gradient(180deg, #160a05 0%, #120804 100%);
+}
+
+.annual-plan-detail-hero-inner {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .88fr);
+  gap: clamp(38px, 6vw, 74px);
+}
+
+.annual-plan-detail-hero h1 {
+  margin: 18px 0 16px;
+  line-height: 1.02;
+  font-size: clamp(44px, 5.2vw, 72px);
+  letter-spacing: -.045em;
+}
+
+.annual-plan-detail-hero p {
+  max-width: 650px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.annual-plan-detail-cover {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid rgba(241,181,72,.14);
+  box-shadow: 0 24px 60px rgba(0,0,0,.25);
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.annual-plan-detail-content {
+  display: grid;
+  align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+  gap: clamp(38px, 5vw, 68px);
+}
+
+.annual-plan-detail-main h2 {
+  margin: 10px 0 16px;
+  font-size: clamp(29px, 3vw, 38px);
+  letter-spacing: -.025em;
+}
+
+.annual-plan-detail-main > p {
+  color: var(--muted);
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.annual-plan-result {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid rgba(117,201,154,.18);
+  border-radius: 16px;
+  background: rgba(117,201,154,.05);
+}
+
+.annual-plan-result svg {
+  flex-shrink: 0;
+  color: var(--success);
+}
+
+.annual-plan-result strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.annual-plan-result p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.annual-plan-facts {
+  position: sticky;
+  top: 125px;
+  display: grid;
+  gap: 1px;
+  border: 1px solid rgba(241,181,72,.12);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,.032), rgba(255,255,255,.014));
+  align-self: start;
+  overflow: hidden;
+}
+
+.annual-plan-facts > div {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  min-width: 0;
+}
+
+.annual-plan-facts > div:last-child {
+  border-bottom: 0;
+}
+
+.annual-plan-facts svg {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.annual-plan-facts span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.annual-plan-facts strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.annual-plan-facts-progress strong {
+  color: var(--gold);
+  font-size: 24px;
+}
+
+.annual-plan-facts-progress .annual-plan-progress-track {
+  margin-top: 10px;
+}
+
+.annual-plan-gallery-section {
+  margin-top: 62px;
+}
+
+.annual-plan-gallery-section h2 {
+  margin-bottom: 22px;
+}
+
+.annual-plan-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.annual-plan-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.02);
+}
+
+.annual-plan-gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.annual-plan-gallery figcaption {
+  padding: 12px 14px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.annual-plan-empty {
+  min-height: 60vh;
+  padding-top: 180px;
+}
+
+.annual-plan-detail-main {
+  padding-left: 26px;
+  border-left: 1px solid rgba(241,181,72,.18);
+  position: relative;
+}
+
+.annual-plan-detail-hero-inner > div, .annual-plan-detail-main, .annual-plan-facts {
+  min-width: 0;
+}
+
+.annual-plan-detail-main::before {
+  content: "IMPLEMENTATION DOCUMENT";
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(241,181,72,.72);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .2em;
+}
+
+.annual-plan-detail-brand {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding: 9px 13px 9px 9px;
+  border: 1px solid rgba(241,181,72,.14);
+  border-radius: 14px;
+  background: rgba(241,181,72,.035);
+}
+
+.annual-plan-detail-brand > span {
+  padding-left: 13px;
+  border-left: 1px solid rgba(241,181,72,.14);
+  color: rgba(247,242,237,.62);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .annual-plan-detail-hero-inner, .annual-plan-detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .annual-plan-detail-hero-inner {
+    gap: 38px;
+  }
+
+  .annual-plan-detail-cover {
+    height: 360px;
+    width: 100%;
+    max-height: none;
+  }
+
+  .annual-plan-facts {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .annual-plan-detail-main {
+    padding-left: 20px;
+  }
+
+  .annual-plan-facts > div {
+    border-right: 1px solid rgba(255,255,255,.06);
+  }
+
+}
+
+@media (max-width: 680px) {
+  .annual-plan-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .annual-plan-detail-hero {
+    padding: 128px 0 42px;
+    padding-top: 112px;
+  }
+
+  .annual-plan-detail-cover {
+    height: 280px;
+    border-radius: 13px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .annual-plan-detail-hero h1 {
+    font-size: clamp(38px, 12vw, 52px);
+  }
+
+  .annual-plan-detail-content {
+    gap: 34px;
+  }
+
+  .annual-plan-detail-main {
+    padding-left: 14px;
+  }
+
+  .annual-plan-detail-main > p {
+    font-size: 14px;
+    line-height: 1.82;
+  }
+
+  .annual-plan-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .annual-plan-facts > div {
+    border-right: 0;
+  }
+
+  .annual-plan-detail-brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .annual-plan-detail-brand > span {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+}

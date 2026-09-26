@@ -1,0 +1,17 @@
+.public-app {
+  min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  .public-app {
+    min-width: 0;
+  }
+
+}
+
+@media (max-width: 680px) {
+  .public-app {
+    overflow-x: clip;
+  }
+
+}

@@ -1,0 +1,13 @@
+.form-help {
+  font-size: 11px;
+  line-height: 1.65;
+  color: var(--muted);
+  background: rgba(241, 181, 72, .055);
+  border: 1px solid rgba(241, 181, 72, .14);
+  border-radius: 11px;
+  padding: 12px 14px;
+}
+
+.form-help strong {
+  color: #e7bd6e;
+}

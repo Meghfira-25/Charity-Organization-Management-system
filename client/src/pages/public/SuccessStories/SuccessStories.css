@@ -1,0 +1,134 @@
+.story-intro {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 42px;
+  align-items: start;
+  padding-top: 36px;
+  padding-bottom: 70px;
+}
+
+.story-intro svg {
+  color: var(--gold);
+}
+
+.story-intro p {
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  max-width: 1000px;
+  margin: 0;
+}
+
+.story-editorial-list {
+  padding-bottom: 92px;
+}
+
+.story-editorial-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 42px;
+  padding: 52px 0;
+  border-top: 1px solid var(--line);
+}
+
+.story-editorial-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.story-index {
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: .16em;
+  padding-top: 6px;
+}
+
+.story-copy {
+  max-width: 900px;
+}
+
+.story-copy h2 {
+  font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  margin: 12px 0 18px;
+}
+
+.story-copy p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 780px;
+  margin: 0;
+}
+
+.story-closing {
+  margin-top: 0;
+}
+
+.story-editorial-row-with-image {
+  grid-template-columns: 70px minmax(0, 1fr) 310px;
+  align-items: center;
+}
+
+.story-editorial-row-with-image .story-copy {
+  padding-right: 30px;
+}
+
+.story-image {
+  width: 310px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 1024px) {
+  .story-editorial-row-with-image {
+    grid-template-columns: 55px minmax(0, 1fr);
+  }
+
+  .story-image {
+    width: 250px;
+    height: 180px;
+  }
+
+  .story-editorial-row-with-image .story-image {
+    grid-column: 2;
+    width: 100%;
+    height: 290px;
+    margin-top: 8px;
+  }
+
+}
+
+@media (max-width: 680px) {
+  .story-intro {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .story-editorial-row {
+    grid-template-columns: 44px 1fr;
+    gap: 14px;
+    padding: 38px 0;
+  }
+
+  .story-editorial-row-with-image {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  .story-editorial-row-with-image .story-copy {
+    padding-right: 0;
+  }
+
+  .story-editorial-row-with-image .story-image {
+    grid-column: 1/-1;
+    height: 230px;
+  }
+
+  .story-copy h2 {
+    font-size: 32px;
+  }
+
+}

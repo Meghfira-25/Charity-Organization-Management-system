@@ -1,0 +1,46 @@
+.page-head-brand {
+  width: fit-content;
+  margin: 0 0 26px;
+  padding: 10px 14px 10px 10px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: 14px;
+}
+
+.page-head-brand .brand-mark {
+  width: 42px;
+  height: 42px;
+}
+
+.page-head-brand .brand-copy strong {
+  font-size: 17px;
+}
+
+.page-head-brand .brand-copy span {
+  font-size: 7px;
+  letter-spacing: 1.9px;
+}
+
+@media (max-width: 1024px) {
+  .page-head-brand {
+    margin-bottom: 22px;
+  }
+
+}
+
+@media (max-width: 680px) {
+  .page-head-brand {
+    margin-bottom: 20px;
+    padding: 8px 11px 8px 8px;
+  }
+
+  .page-head-brand .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .page-head-brand .brand-copy strong {
+    font-size: 15px;
+  }
+
+}

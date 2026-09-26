@@ -1,0 +1,14 @@
+.progress {
+  width: 120px;
+  height: 6px;
+  border-radius: 10px;
+  background: var(--surface-3);
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #9d6822, var(--gold));
+  border-radius: inherit;
+}
