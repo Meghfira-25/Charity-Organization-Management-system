@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../../api/client.js";
 import CountUp from "../../../components/CountUp/CountUp.jsx";
+import heroImage from "../../public/IMG/photo_2026-10-08_03-00-19.jpg"
 import "./Home.css";
 const impact = [{
   icon: Users,
@@ -23,7 +24,7 @@ const impact = [{
 }];
 const annualPlanFallback = [{
   id: "exercise-books",
-  title: "Exercise Book Donation 2026",
+  title: "Back-to-school support 2026",
   status: "Ongoing",
   short_description: "Collecting and distributing exercise books for sponsored students during the academic year.",
   target_value: 2000,
@@ -31,9 +32,9 @@ const annualPlanFallback = [{
   target_unit: "books"
 }, {
   id: "mothers-workshop",
-  title: "Mothers Job Creation Initiative",
+  title: "Mother's Job Creation Initiative",
   status: "Upcoming",
-  short_description: "A practical workshop designed to create sustainable income opportunities for mothers.",
+  short_description: "We provide skills training and startup capital to help mothers establish small businesses and earn a sustainable income.",
   target_value: 60,
   current_value: 0,
   target_unit: "mothers"
@@ -41,7 +42,7 @@ const annualPlanFallback = [{
   id: "family-support",
   title: "Seasonal Family Support",
   status: "Planned",
-  short_description: "Coordinated essential support for vulnerable households during high-need periods.",
+  short_description: "We provide food, clothing, and other essential supplies to families in need during special seasons such as Ramadan and Eid.",
   target_value: 250,
   current_value: 0,
   target_unit: "families"
@@ -80,11 +81,7 @@ export default function Home() {
             </h1>
 
             <p>
-              Ishraq Charity Organization is dedicated
-              to supporting vulnerable communities
-              through education, healthcare,
-              humanitarian aid, and sustainable
-              development programs.
+             Ishraq Charity Organization is dedicated to supporting vulnerable communities through education, healthcare, humanitarian assistance, and sustainable development programs, while promoting compassion, dignity, and lasting positive change.
             </p>
 
             <div className="hero-actions">
@@ -100,7 +97,8 @@ export default function Home() {
           </div>
 
          <div className="hero-image-wrap">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRitz_ErRMWwBUvR1pFzt081Qe2x0rFD_C_cyx0wP-BYw&s=10" alt="Ishraq charity activities" className="hero-image" />
+       <img src={heroImage} alt="Ishraq charity activities" className="hero-image" />
+
 </div>
         </div>
       </section>
@@ -158,7 +156,11 @@ Our mission is to connect people in need with the right support, resources, and 
           <h3>Our commitment</h3>
 
           <p>
-            Support reaches the right people, resources are tracked carefully, and every activity is connected to real community needs.
+           We are committed to ensuring that every act of kindness creates
+  meaningful change. Through transparency, accountability, and
+  compassion, we strive to deliver assistance to those who need
+  it most, manage resources responsibly, and develop initiatives
+  that address the real needs of our communities.
           </p>
 
           <div className="mini-lines">
@@ -203,51 +205,74 @@ Our mission is to connect people in need with the right support, resources, and 
         </div>
       </section>
 
-      <section className="section annual-plan-home-section">
-        <div className="shell">
-          <div className="annual-plan-home-head">
-            <div>
-              <span className="eyebrow">ANNUAL PLANS</span>
-              <h2>Our commitments for <span className="gold-text">this year</span></h2>
+     
+<section className="section annual-plan-home-section">
+  <div className="shell">
+    <div className="annual-plan-home-head">
+      <div>
+        <span className="eyebrow">ANNUAL PLANS</span>
+        <h2>
+          Our commitments for{" "}
+          <span className="gold-text">this year</span>
+        </h2>
+      </div>
+
+      <Link to="/annual-plans" className="text-link">
+        View all plans
+        <ArrowRight size={16} />
+      </Link>
+    </div>
+
+    <div className="annual-plan-home-grid">
+      {annualPlanDisplay.slice(0, 3).map((plan) => {
+        const target = Number(plan.target_value) || 0;
+        const current = Number(plan.current_value) || 0;
+
+        const progress = target > 0
+          ? Math.max(0, Math.min(100, Math.round(current / target * 100)))
+          : 0;
+
+        return (
+          <article
+            className="annual-plan-home-card"
+            key={plan.id || plan.title}
+          >
+            <div className="annual-plan-home-top">
+              <span>{plan.status || "Planned"}</span>
+              <strong>{progress}%</strong>
             </div>
 
-            <Link to="/annual-plans" className="text-link">
-              View all plans
-              <ArrowRight size={16} />
+            <h3>{plan.title}</h3>
+
+            <p>
+              {plan.short_description || plan.description}
+            </p>
+
+            {target > 0 && (
+              <>
+                <div className="annual-plan-progress-track">
+                  <span style={{ width: `${progress}%` }} />
+                </div>
+
+                <small>
+                  {current.toLocaleString()} /{" "}
+                  {target.toLocaleString()}{" "}
+                  {plan.target_unit || "target"}
+                </small>
+              </>
+            )}
+
+            <Link to={`/annual-plans/${plan.id}`}>
+              View plan
+              <ArrowRight size={14} />
             </Link>
-          </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
-          <div className="annual-plan-home-grid">
-            {annualPlanDisplay.map(plan => {
-            const target = Number(plan.target_value) || 0;
-            const current = Number(plan.current_value) || 0;
-            const progress = target ? Math.min(100, Math.round(current / target * 100)) : 0;
-            return <article className="annual-plan-home-card" key={plan.id || plan.title}>
-                  <div className="annual-plan-home-top">
-                    <span>{plan.status || "Planned"}</span>
-                    <strong>{progress}%</strong>
-                  </div>
-
-                  <h3>{plan.title}</h3>
-                  <p>{plan.short_description || plan.description}</p>
-
-                  {target > 0 && <>
-                      <div className="annual-plan-progress-track">
-                        <span style={{
-                    width: `${progress}%`
-                  }} />
-                      </div>
-                      <small>{current.toLocaleString()} / {target.toLocaleString()} {plan.target_unit || "target"}</small>
-                    </>}
-
-                  <Link to={`/annual-plans/${plan.id}`}>
-                    View plan <ArrowRight size={14} />
-                  </Link>
-                </article>;
-          })}
-          </div>
-        </div>
-      </section>
 
       <section className="cta-band">
         <div className="shell">

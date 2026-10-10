@@ -119,7 +119,7 @@ export default function PublicContentPage({
     const updates = display.slice(1);
     return <main className="events-page">
         <section className="page-hero shell events-page-hero">
-          <PageHeader showLogo eyebrow={eyebrow} title={title} description={description} />
+          <PageHeader eyebrow={eyebrow} title={title} description={description} />
         </section>
 
         <section className="section shell events-section">
