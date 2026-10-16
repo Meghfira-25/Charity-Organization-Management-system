@@ -12,9 +12,34 @@ import { Link } from "react-router-dom";
 import { api } from "../../../api/client.js";
 import PageHeader from "../../../components/PageHeader/PageHeader.jsx";
 import "./AnnualPlans.css";
-import backToSchool from "../../public/IMG/back-to-school.jpg"
+import backToSchool from "../../public/IMG/photo_3_2026-10-15_23-05-40.jpg"
+import mothers from "../../public/IMG/beneficiariesImage.jpg"
+import mothers_job from "../../public/IMG/fams.jpg"
+import sesonal_support from "../../public/IMG/photo_1_2026-10-15_23-05-39.jpg"
+import meeting from "../../public/IMG/photo_2026-10-08_02-23-40.jpg"
+import exp from "../../public/IMG/exper.jpg"
 
 export const fallback = [
+   {
+    id: "beneficairies-registration",
+    title: "Beneficairies Registration Program",
+    year: 2026,
+    short_description:
+      "Identifying and registering vulnerable individuals and families to ensure fair and organized access to essential charitable assistance and support",
+    description:
+      "Identifying, registering, and supporting vulnerable individuals and families through a well-organized and transparent registration process. The program aims to understand beneficiaries’ needs, ensure fair access to charitable assistance, and connect eligible individuals with essential resources and support services to improve their quality of life.",
+    status: "Completed",
+    start_date: "2026-06-15",
+    end_date: "2026-08-15",
+    start_date: null,
+    end_date: null,
+    target_value: 350,
+    current_value: 350,
+    target_unit: "individuals",
+    beneficiaries: 150,
+    cover_image: mothers,
+    images: []
+  },
   {
     id: "exercise-books",
     title: "Bck-to-school support 2026",
@@ -23,16 +48,36 @@ export const fallback = [
       "Providing exercise books and essential learning materials to sponsored students during the academic year.",
     description:
       "Through our Back-to-School Support initiative, we provide school bags, exercise books, pens, uniforms, and other essential supplies to students from low-income families. This helps reduce school-related expenses, prevents shortages of learning materials, and enables students to attend classes prepared and participate fully in their education.",
-    status: "Ongoing",
+    status: "Completed",
     start_date: "2026-08-01",
     end_date: "2026-09-30",
     target_value: 2000,
-    current_value: 1450,
+    current_value: 2000,
     target_unit: "exercise books",
-    beneficiaries: 430,
+    beneficiaries: 500,
     cover_image: backToSchool,
     images: []
   },
+
+
+
+{
+  id: "members-training",
+  title: "Members Training Program",
+  year: 2026,
+  short_description:
+    "Empowering organization members through practical training and skill development.",
+  description:
+    "Strengthening members' leadership, communication, teamwork, and organizational skills through training sessions and workshops to improve their participation in charitable activities and community support.",
+  status: "Upcoming",
+  start_date: "2026-11-01",
+  end_date: "2026-11-30",
+  members: 100,
+  cover_image: meeting,
+  images: []
+},
+
+
   {
     id: "mothers-workshop",
     title: "Mother's Job Creation Initiative",
@@ -41,17 +86,36 @@ export const fallback = [
       "Empowering mothers through practical training and sustainable income-generation opportunities.",
     description:
       "Through our Mothers Job Creation Initiative, we support mothers from low-income families by providing practical skills training, essential working materials, and startup capital to help them establish small businesses and generate sustainable income. The initiative aims to reduce financial dependence, strengthen household income, and create long-term economic opportunities for mothers and their families. We measure our impact by tracking the number of mothers supported, businesses established, startup funds distributed, and income-generating activities successfully launched.",
-    status: "Upcoming",
+    status: "Planned",
     start_date: "2027-02-01",
     end_date: "2027-03-15",
     target_value: 60,
     current_value: 0,
     target_unit: "mothers",
     beneficiaries: 60,
-    cover_image:
-      "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80",
+    cover_image: mothers_job,
     images: []
   },
+
+   
+{
+  id: "charity-experience-exchange",
+  title: "Charity Organizations Experience Exchange Program",
+  year: 2026,
+  short_description:
+    "Visiting five charity organizations to learn from their experiences, activities, and approaches to community service.",
+  description:
+    "This program aims to strengthen Ishraq Charity Organization by organizing educational visits to five different charity organizations. Through these visits, Ishraq members will have the opportunity to observe how other organizations operate, manage resources, organize charitable activities, support beneficiaries, and engage with their communities. The program encourages knowledge sharing, collaboration, and the exchange of practical experiences. By learning from the successes and challenges of other organizations, members can discover new ideas, improve organizational practices, and develop more effective approaches to serving vulnerable communities.",
+  status: "Planned",
+  start_date: "2026-11-15",
+  end_date: "2026-12-15",
+  members: 20,
+  organizations: 5,
+  cover_image:exp,
+  images: []
+},
+
+
   {
     id: "family-support",
     title: "Seasonal Family Support",
@@ -67,67 +131,12 @@ export const fallback = [
     current_value: 0,
     target_unit: "families",
     beneficiaries: 250,
-    cover_image:
-      "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=80",
+    cover_image: sesonal_support,
     images: []
   },
-  {
-    id: "healthcare-assistance",
-    title: "Healthcare Assistance Program",
-    year: 2026,
-    short_description:
-      "Improving access to essential medical assistance for vulnerable individuals and families.",
-    description:
-      "Supporting individuals facing financial barriers to healthcare through essential medical assistance and community health initiatives.",
-    status: "Planned",
-    start_date: null,
-    end_date: null,
-    target_value: 150,
-    current_value: 0,
-    target_unit: "individuals",
-    beneficiaries: 150,
-    cover_image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-    images: []
-  },
-  {
-    id: "orphan-support",
-    title: "Orphan and Child Support Initiative",
-    year: 2026,
-    short_description:
-      "Supporting orphaned and vulnerable children through education and essential assistance.",
-    description:
-      "Providing educational materials, essential necessities, and development opportunities for orphaned and vulnerable children.",
-    status: "Planned",
-    start_date: null,
-    end_date: null,
-    target_value: 200,
-    current_value: 0,
-    target_unit: "children",
-    beneficiaries: 200,
-    cover_image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
-    images: []
-  },
-  {
-    id: "community-development",
-    title: "Community Development Initiative",
-    year: 2026,
-    short_description:
-      "Strengthening underserved communities through volunteering and sustainable development activities.",
-    description:
-      "Encouraging community participation, responsible resource distribution, and practical initiatives that support long-term development.",
-    status: "Planned",
-    start_date: null,
-    end_date: null,
-    target_value: 300,
-    current_value: 0,
-    target_unit: "individuals",
-    beneficiaries: 300,
-    cover_image:
-      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=80",
-    images: []
-  }
+
+   
+ 
 ];
 
 const statusIcon = {

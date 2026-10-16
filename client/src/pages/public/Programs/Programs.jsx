@@ -4,7 +4,17 @@ import { Link } from "react-router-dom";
 import { api, qs } from "../../../api/client.js";
 import PageHeader from "../../../components/PageHeader/PageHeader.jsx";
 import { publicImages } from "../../../config/publicImages.js";
+import educationImage from "../../public/IMG/back-to-school.jpg"
+import foodImage from "../../public/IMG/photo_2026-10-16_01-34-47.jpg"
+import familyImage from "../../public/IMG/fammsu.jpg"
+import medicalImage from "../../public/IMG/medice.jpg"
+import livelhoodImage from "../../public/IMG/supp.jpg"
+import emergenyImage from "../../public/IMG/emer.jpg"
+
+
 import "./Programs.css";
+
+
 const fallback = [
   {
     id: "p1",
@@ -15,7 +25,7 @@ const fallback = [
     description:
       "Ishraq's Education Support Program helps children and young people overcome financial barriers that may interrupt their learning. We provide support based on individual needs, helping students remain engaged in education and giving them better opportunities to develop their knowledge, skills and confidence.",
 
-    image: publicImages.programs.education,
+    image: educationImage,
     icon: BookOpen,
 
     focus: [
@@ -40,7 +50,7 @@ const fallback = [
     description:
       "Ishraq provides food and essential household assistance to individuals and families who struggle to meet their daily needs. The program focuses on reducing immediate hardship by providing practical support such as staple food items, clothing and other essential necessities.",
 
-    image: publicImages.programs.food,
+    image: foodImage,
     icon: Package,
 
     focus: [
@@ -65,7 +75,7 @@ const fallback = [
     description:
       "The Medical Assistance Program supports individuals and families who face difficulties accessing necessary healthcare. Ishraq works to reduce the financial burden of medical needs by providing support for treatment, medication, medical examinations and other essential health-related expenses where possible.",
 
-    image: publicImages.programs.medical,
+    image: medicalImage,
     icon: HeartPulse,
 
     focus: [
@@ -90,7 +100,7 @@ const fallback = [
     description:
       "Safe and stable housing is essential for family wellbeing. Ishraq supports vulnerable households facing rent difficulties, unstable living conditions or other family emergencies that may place their security and daily life at risk.",
 
-    image: publicImages.programs.housing,
+    image: familyImage,
     icon: Home,
 
     focus: [
@@ -115,7 +125,7 @@ const fallback = [
     description:
       "Ishraq's Livelihood and Job Creation Program focuses on helping vulnerable individuals move toward greater self-reliance. The program supports practical opportunities that can improve income generation, strengthen household resilience and reduce long-term dependence on emergency assistance.",
 
-    image: publicImages.programs.livelihood,
+    image: livelhoodImage,
     icon: Activity,
 
     focus: [
@@ -140,7 +150,7 @@ const fallback = [
     description:
       "Ishraq responds to urgent, seasonal and community-wide needs by organizing assistance for people affected by unexpected hardship or difficult circumstances. The program helps coordinate resources and community support so assistance can reach those who need it most during critical moments.",
 
-    image: publicImages.programs.emergency,
+    image: emergenyImage,
     icon: ShieldCheck,
 
     focus: [
@@ -198,51 +208,38 @@ export default function Programs() {
         <PageHeader eyebrow="OUR PROGRAMS" title="Support designed around real community needs." description="Ishraq organizes assistance across education, food, health, housing, livelihoods and community response. Each program connects public generosity with structured beneficiary, resource and distribution management." />
       </section>
 
-      <section className="section shell editorial-intro">
-        <div>
-          <span className="eyebrow">
-            HOW PROGRAMS WORK
-          </span>
+  
+<section className="section shell editorial-intro">
+  <div>
+    <span className="eyebrow">
+      OUR COMMITMENT
+    </span>
 
-          <h2>
-            Different needs. One
-            coordinated mission.
-          </h2>
-        </div>
+    <h2>
+      Empowering Lives.
+      Strengthening Communities.
+    </h2>
+  </div>
 
-        <div>
-          <p>
-            Programs give Ishraq's
-            charitable work a clear
-            public structure. Behind
-            each program, staff register
-            beneficiaries, document the
-            need, review assistance,
-            verify donations, track
-            available resources and
-            record distributions.
-          </p>
+  <div>
+    <p>
+      At Ishraq Charity Organization, our programs
+      are driven by a commitment to improving the
+      lives of vulnerable individuals and families.
+      We believe that everyone deserves access
+      to essential resources, opportunities,
+      and a dignified life.
+    </p>
 
-          <p>
-            This creates a traceable
-            path from a community need
-            to the support actually
-            delivered.
-          </p>
-        </div>
-      </section>
-
-      <section className="program-journey shell" aria-label="Program process">
-        {["Register the need", "Review the application", "Match available support", "Record the assistance"].map((step, index) => <div className="program-journey-step" key={step}>
-            <span>
-              {String(index + 1).padStart(2, "0")}
-            </span>
-
-            <strong>
-              {step}
-            </strong>
-          </div>)}
-      </section>
+    <p>
+      From educational assistance and healthcare
+      support to family stability and economic
+      empowerment, our initiatives address
+      important community needs while encouraging
+      long-term independence and positive change.
+    </p>
+  </div>
+</section>
 
       <section className="program-detail-list">
         {display.map((item, index) => {

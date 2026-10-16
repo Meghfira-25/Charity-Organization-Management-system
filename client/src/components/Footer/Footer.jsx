@@ -15,7 +15,7 @@ export default function Footer() {
           </p>
 
           <div className="footer-socials">
-            <a href="#" aria-label="Facebook">
+            <a href="https://www.facebook.com/ishraqcharityorganization" aria-label="Facebook">
               <Facebook size={18} />
             </a>
 
@@ -62,7 +62,7 @@ export default function Footer() {
 
           <span>
             <Mail size={17} />
-            info@ishraq.org
+           ishraqcharity@gmail.com
           </span>
 
           <span>

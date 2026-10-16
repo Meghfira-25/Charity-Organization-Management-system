@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../../api/client.js";
 import CountUp from "../../../components/CountUp/CountUp.jsx";
-import heroImage from "../../public/IMG/photo_2026-10-08_03-00-19.jpg"
+import heroImage from "../../public/IMG/photo_2026-10-14_11-23-13.jpg"
 import "./Home.css";
 const impact = [{
   icon: Users,
@@ -25,10 +25,10 @@ const impact = [{
 const annualPlanFallback = [{
   id: "exercise-books",
   title: "Back-to-school support 2026",
-  status: "Ongoing",
+  status: "Completed",
   short_description: "Collecting and distributing exercise books for sponsored students during the academic year.",
   target_value: 2000,
-  current_value: 1450,
+  current_value: 2000,
   target_unit: "books"
 }, {
   id: "mothers-workshop",
