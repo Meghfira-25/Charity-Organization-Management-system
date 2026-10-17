@@ -58,7 +58,7 @@ export default function Contact() {
 
             <span>
               <b>Email</b>
-              info@ishraq.org
+             ishraqcharity@gmail.com
             </span>
           </div>
 
@@ -67,7 +67,7 @@ export default function Contact() {
 
             <span>
               <b>Phone</b>
-              +251 900 000 000
+              +251 945 469 199
             </span>
           </div>
 
@@ -76,7 +76,7 @@ export default function Contact() {
 
             <span>
               <b>Location</b>
-              Addis Ababa, Ethiopia
+               Lebu OSAC Building, Addis Ababa
             </span>
           </div>
         </div>

@@ -44,10 +44,10 @@ const backToSchoolImage = getImage(
   "back-to-school"
 );
 
-const registrationImage = getImage(
-  "beneficiary-registration",
+const  beneficiariesimage= getImage(
+  "beneficiariesimage",
   "registration",
-  "beneficiaries"
+  "beneficiariesimage"
 );
 
 const evaluationImage = getImage(
@@ -99,7 +99,7 @@ const fallback = {
         "Ishraq continued its beneficiary registration activities to better understand the needs of vulnerable individuals and families.",
       description:
         "Ishraq Charity Organization carried out beneficiary registration activities as part of its efforts to strengthen the delivery of charitable assistance. The initiative focuses on identifying individuals and families who may require support and gathering information about their circumstances and needs. By improving beneficiary information and understanding different community challenges, Ishraq aims to plan assistance more responsibly, prioritize available resources, and ensure that charitable activities respond to genuine needs.",
-      // image: 
+      image: beneficiariesimage,
     },
     {
       id: "news-annual-review",

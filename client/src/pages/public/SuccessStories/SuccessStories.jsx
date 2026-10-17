@@ -5,10 +5,9 @@ import {
   GraduationCap,
   BriefcaseBusiness,
   Sparkles,
-  Hammer,
-  Users,
   CheckCircle2
 } from "lucide-react";
+
 import { Link } from "react-router-dom";
 import PageHeader from "../../../components/PageHeader/PageHeader.jsx";
 import "./SuccessStories.css";
@@ -57,17 +56,6 @@ const educationImage = getImage(
 const mosqueCleaningImage = getImage(
   "mosque-cleaning",
   "mosque"
-);
-
-const mosqueRenovationImage = getImage(
-  "mosque-renovation",
-  "mosque-rebuilding"
-);
-
-const employmentImage = getImage(
-  "employment-support",
-  "board-employment",
-  "job-opportunities"
 );
 
 const stories = [
@@ -130,7 +118,7 @@ const stories = [
     image: mosqueCleaningImage,
     icon: Sparkles,
     imageLabel: "Mosque Cleaning",
-    metric: "~4",
+    metric: "4",
     metricLabel: "MOSQUES SERVED",
     introduction:
       "Community service includes caring for shared places that hold importance in people's spiritual and social lives.",
@@ -144,11 +132,6 @@ const stories = [
     number: "05",
     title: "Contributing to Mosque Repairs and Rebuilding",
     category: "COMMUNITY FACILITIES & DEVELOPMENT",
-    image: mosqueRenovationImage,
-    icon: Hammer,
-    imageLabel: "Mosque Renovation",
-    metric: null,
-    metricLabel: "",
     introduction:
       "Improving community facilities is another way Ishraq contributes to creating better shared environments.",
     paragraphs: [
@@ -161,11 +144,6 @@ const stories = [
     number: "06",
     title: "Expanding Employment Opportunities",
     category: "EMPLOYMENT & COMMUNITY EMPOWERMENT",
-    image: employmentImage,
-    icon: Users,
-    imageLabel: "Employment Opportunities",
-    metric: null,
-    metricLabel: "",
     introduction:
       "Meaningful employment opportunities can help individuals strengthen their independence and contribute to the wellbeing of their families.",
     paragraphs: [
@@ -176,6 +154,9 @@ const stories = [
 ];
 
 export default function SuccessStories() {
+  const imageStories = stories.slice(0, 4);
+  const textStories = stories.slice(4);
+
   return (
     <main className="editorial-page success-stories-page">
       <section className="page-hero shell">
@@ -233,7 +214,7 @@ export default function SuccessStories() {
         </div>
 
         <div className="shell success-stories-list">
-          {stories.map((story, index) => {
+          {imageStories.map((story, index) => {
             const Icon = story.icon;
 
             return (
@@ -290,7 +271,6 @@ export default function SuccessStories() {
                       size={18}
                       strokeWidth={1.7}
                     />
-
                     <span>
                       ISHRAQ CHARITY ORGANIZATION
                     </span>
@@ -311,11 +291,9 @@ export default function SuccessStories() {
                         size={62}
                         strokeWidth={1.3}
                       />
-
                       <span>
                         ISHRAQ CHARITY ORGANIZATION
                       </span>
-
                       <h3>{story.imageLabel}</h3>
                     </div>
                   )}
@@ -323,16 +301,60 @@ export default function SuccessStories() {
                   <div className="success-story-image-overlay" />
 
                   <div className="success-story-image-caption">
-                    <span>
-                      COMMUNITY IMPACT
-                    </span>
-
+                    <span>COMMUNITY IMPACT</span>
                     <strong>{story.imageLabel}</strong>
                   </div>
                 </div>
               </article>
             );
           })}
+
+          <div className="success-text-grid">
+            {textStories.map((story) => (
+              <article
+                className="success-text-card"
+                key={story.id}
+              >
+                <div className="success-story-top">
+                  <span className="success-story-number">
+                    {story.number} / 06
+                  </span>
+
+                  <span className="success-story-period">
+                    PAST TWO YEARS
+                  </span>
+                </div>
+
+                <span className="eyebrow">
+                  {story.category}
+                </span>
+
+                <h2>{story.title}</h2>
+
+                <div className="success-story-accent" />
+
+                <p className="success-story-introduction">
+                  {story.introduction}
+                </p>
+
+                <div className="success-story-paragraphs">
+                  {story.paragraphs.map(
+                    (paragraph, paragraphIndex) => (
+                      <p key={paragraphIndex}>
+                        {paragraph}
+                      </p>
+                    )
+                  )}
+                </div>
+
+                <div className="success-story-footer">
+                  <span>
+                    ISHRAQ CHARITY ORGANIZATION
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

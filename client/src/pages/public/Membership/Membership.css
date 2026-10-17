@@ -1,3 +1,184 @@
-.page-hero,.section{
+
+.membership-experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 35px;
+  padding-top: 35px;
+  border-top: 1px solid rgba(241, 181, 72, 0.18);
+}
+
+.membership-experience-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.membership-experience-heading .eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gold);
+}
+
+.membership-experience-heading h2 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: clamp(22px, 2.5vw, 30px);
+  line-height: 1.3;
+}
+
+.membership-experience-heading p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.membership-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 18px;
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.membership-add-btn:hover {
+  background: var(--gold);
+  color: #301807;
+}
+
+.membership-experience-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 20px;
+  border: 1px dashed rgba(241, 181, 72, 0.3);
+  border-radius: 15px;
+  background: var(--surface);
+  text-align: center;
+}
+
+.membership-experience-empty svg {
+  color: var(--gold);
+}
+
+.membership-experience-empty p {
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.membership-experience-empty span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.membership-experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.membership-experience-card {
+  padding: 25px;
+  border: 1px solid rgba(241, 181, 72, 0.2);
+  border-radius: 15px;
+  background: var(--surface);
+}
+
+.membership-experience-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.membership-experience-card-top h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.membership-remove-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border: 1px solid rgba(210, 65, 65, 0.3);
+  border-radius: 8px;
+  background: transparent;
+  color: #c45a4c;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.membership-remove-btn:hover {
+  background: rgba(210, 65, 65, 0.08);
+}
+
+.membership-add-btn:disabled,
+.membership-remove-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.membership-experience-card .form-grid {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .membership-experience-section {
+    gap: 22px;
+    margin-top: 28px;
+    padding-top: 28px;
+  }
+
+  .membership-experience-heading {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .membership-add-btn {
+    width: 100%;
+  }
+
+  .membership-experience-card {
+    padding: 18px;
+  }
+
+  .membership-experience-card-top {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .membership-experience-card {
     padding: 15px;
+  }
+
+  .membership-experience-card-top h3 {
+    font-size: 15px;
+  }
+
+  .membership-remove-btn {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
 }
